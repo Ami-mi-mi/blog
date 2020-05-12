@@ -1,64 +1,65 @@
-##Ò»¡¢¼ì²âÊý×é
-###1¡¢instanceof
+##ä¸€ã€æ£€æµ‹æ•°ç»„
+
+###1ã€instanceof
 ```
 if(value instanceof Array) {
-//¶ÔÊý×é½øÐÐÄ³Ð©²Ù×÷
+//å¯¹æ•°ç»„è¿›è¡ŒæŸäº›æ“ä½œ
 }
 ```
 
-###2¡¢isArray
+###2ã€isArray
 ```
 if(Array.isArray(value)) {
-//¶ÔÊý×é½øÐÐÄ³Ð©²Ù×÷
+//å¯¹æ•°ç»„è¿›è¡ŒæŸäº›æ“ä½œ
 }
 ```
 
-##¶þ¡¢×ª»»·½·¨
+##äºŒã€è½¬æ¢æ–¹æ³•
 
-ËùÓÐ¶ÔÏó¶¼¾ßÓÐtoLocaleString()¡¢toString()ºÍvalueOf()·½·¨¡£
+æ‰€æœ‰å¯¹è±¡éƒ½å…·æœ‰toLocaleString()ã€toString()å’ŒvalueOf()æ–¹æ³•ã€‚
 
-1¡¢µ÷ÓÃtoString()·½·¨»á·µ»ØÓÉÊý×éÖÐÃ¿¸öÖµµÄ×Ö·û´®ÐÎÊ½Æ´½Ó¶ø³ÉµÄÒ»¸öÒÔ¶ººÅ·Ö¸ôµÄ×Ö·û´®¡£
+1ã€è°ƒç”¨toString()æ–¹æ³•ä¼šè¿”å›žç”±æ•°ç»„ä¸­æ¯ä¸ªå€¼çš„å­—ç¬¦ä¸²å½¢å¼æ‹¼æŽ¥è€Œæˆçš„ä¸€ä¸ªä»¥é€—å·åˆ†éš”çš„å­—ç¬¦ä¸²ã€‚
 
-2¡¢µ÷ÓÃvalueOf()·µ»ØµÄ»¹ÊÇÊý×é¡£
+2ã€è°ƒç”¨valueOf()è¿”å›žçš„è¿˜æ˜¯æ•°ç»„ã€‚
 
-3¡¢µ÷ÓÃtoLocaleString()·½·¨»á·µ»ØÓÉÊý×éÖÐÃ¿¸öÖµµÄ×Ö·û´®ÐÎÊ½Æ´½Ó¶ø³ÉµÄÒ»¸öÒÔ¶ººÅ·Ö¸ôµÄ×Ö·û´®¡£
+3ã€è°ƒç”¨toLocaleString()æ–¹æ³•ä¼šè¿”å›žç”±æ•°ç»„ä¸­æ¯ä¸ªå€¼çš„å­—ç¬¦ä¸²å½¢å¼æ‹¼æŽ¥è€Œæˆçš„ä¸€ä¸ªä»¥é€—å·åˆ†éš”çš„å­—ç¬¦ä¸²ã€‚
 
-Êµ¼ÊÉÏ£¬ÎªÁË´´½¨Õâ¸ö×Ö·û´®»áµ÷ÓÃÊý×éÃ¿Ò»ÏîµÄtoString()·½·¨¡£
+å®žé™…ä¸Šï¼Œä¸ºäº†åˆ›å»ºè¿™ä¸ªå­—ç¬¦ä¸²ä¼šè°ƒç”¨æ•°ç»„æ¯ä¸€é¡¹çš„toString()æ–¹æ³•ã€‚
 ```
-var colors = ["red", "blue", "green"]; //´´½¨Ò»¸ö°üº¬3¸ö×Ö·û´®µÄÊý×é
+var colors = ["red", "blue", "green"]; //åˆ›å»ºä¸€ä¸ªåŒ…å«3ä¸ªå­—ç¬¦ä¸²çš„æ•°ç»„
 alert(colors.toString()); //colors,blue,green
 alert(colors.valueOf()); //colors,blue,green
 alert(colors); //colors,blue,green
 ```
-µÚÒ»¸öalertºÁÎÞÒÉÎÊÊÇ·µ»ØÒÔ¶ººÅ·Ö¸ôµÄ×Ö·û´®¡£µÚ¶þºÍµÚÈý¸ö×îºóÔÙä¯ÀÀÆ÷µÄ¾¯¸æ¿òÖÐÒ²·µ»ØµÄÊÇÒÔ¶ººÅ·Ö¸ôµÄ×Ö·û´®£¬Ô­ÒòÔÚÓÚalertÒª½ÓÊÕ×Ö·û´®²ÎÊý£¬ËùÒÔËü»áÔÙºóÌ¨µ÷ÓÃtoString·½·¨¡£valueOf()»¹ÊÇ·µ»ØÊý×éµÄ¡£
+ç¬¬ä¸€ä¸ªalertæ¯«æ— ç–‘é—®æ˜¯è¿”å›žä»¥é€—å·åˆ†éš”çš„å­—ç¬¦ä¸²ã€‚ç¬¬äºŒå’Œç¬¬ä¸‰ä¸ªæœ€åŽå†æµè§ˆå™¨çš„è­¦å‘Šæ¡†ä¸­ä¹Ÿè¿”å›žçš„æ˜¯ä»¥é€—å·åˆ†éš”çš„å­—ç¬¦ä¸²ï¼ŒåŽŸå› åœ¨äºŽalertè¦æŽ¥æ”¶å­—ç¬¦ä¸²å‚æ•°ï¼Œæ‰€ä»¥å®ƒä¼šå†åŽå°è°ƒç”¨toStringæ–¹æ³•ã€‚valueOf()è¿˜æ˜¯è¿”å›žæ•°ç»„çš„ã€‚
 
-##Èý¡¢Õ»·½·¨£¨LIFO  Last-in-First-Out ºó½øÏÈ³ö£©
+##ä¸‰ã€æ ˆæ–¹æ³•ï¼ˆLIFO  Last-in-First-Out åŽè¿›å…ˆå‡ºï¼‰
 
-1¡¢push Êý×éÄ©Î²ÍÆÈë£¬·µ»ØÐÞ¸ÄºóÊý×éµÄ³¤¶È
+1ã€push æ•°ç»„æœ«å°¾æŽ¨å…¥ï¼Œè¿”å›žä¿®æ”¹åŽæ•°ç»„çš„é•¿åº¦
 
-2¡¢pop Êý×éÄ©Î²É¾³ý£¬·µ»Øµ±Ç°É¾³ýµÄÏî
+2ã€pop æ•°ç»„æœ«å°¾åˆ é™¤ï¼Œè¿”å›žå½“å‰åˆ é™¤çš„é¡¹
 
-##ËÄ¡¢¶ÓÁÐ·½·¨(FIFO First-in-First-Out ÏÈ½øÏÈ³ö)
+##å››ã€é˜Ÿåˆ—æ–¹æ³•(FIFO First-in-First-Out å…ˆè¿›å…ˆå‡º)
 
-1¡¢push Êý×éÄ©Î²ÍÆÈë£¬·µ»ØÐÞ¸ÄºóÊý×éµÄ³¤¶È
+1ã€push æ•°ç»„æœ«å°¾æŽ¨å…¥ï¼Œè¿”å›žä¿®æ”¹åŽæ•°ç»„çš„é•¿åº¦
 
-2¡¢shift É¾³ýÊý×éµÚÒ»Ïî£¬·µ»Øµ±Ç°É¾³ýµÄÏî
+2ã€shift åˆ é™¤æ•°ç»„ç¬¬ä¸€é¡¹ï¼Œè¿”å›žå½“å‰åˆ é™¤çš„é¡¹
 
 
-unshift ´ÓÊý×éµÄÇ°¶Ë¼ÓÏî¡£·µ»ØÐÂÊý×éµÄ³¤¶È¡£Óëpop½áºÏÊ¹ÓÃ¿ÉÒÔ´ÓÏà·´·½ÏòÄ£Äâ¶ÓÁÐ£¬¼´ÔÚÊý×éÇ°¶Ë¼ÓÏî£¬´ÓÊý×éÄ©Î²ÒÆ³ýÏî¡£
+unshift ä»Žæ•°ç»„çš„å‰ç«¯åŠ é¡¹ã€‚è¿”å›žæ–°æ•°ç»„çš„é•¿åº¦ã€‚ä¸Žpopç»“åˆä½¿ç”¨å¯ä»¥ä»Žç›¸åæ–¹å‘æ¨¡æ‹Ÿé˜Ÿåˆ—ï¼Œå³åœ¨æ•°ç»„å‰ç«¯åŠ é¡¹ï¼Œä»Žæ•°ç»„æœ«å°¾ç§»é™¤é¡¹ã€‚
 
-##Îå¡¢ÖØÅÅÐò·½·¨
-###1¡¢reverse£¨£©·´×ªÊý×éÏîµÄË³Ðò¡£
+##äº”ã€é‡æŽ’åºæ–¹æ³•
+###1ã€reverseï¼ˆï¼‰åè½¬æ•°ç»„é¡¹çš„é¡ºåºã€‚
 ```
 var values = [1,2,3,4];
 values.reverse();
 alert(values);         //5,4,3,2,1
 ```
 
-###2¡¢sort()
-Ä¬ÈÏÇé¿ö°´ÉýÐòÅÅÁÐÊý×éÏî---¼´×îÐ¡µÄÎ»ÓÚ×îÇ°Ãæ£¬×î´óµÄÎ»ÓÚ×îºóÃæ¡£
-ÎªÁËÊµÏÖÅÅÐò£¬sort()·½·¨»áµ÷ÓÃÊý×éÃ¿Ò»ÏîµÄtoString()×ªÐÍ·½·¨£¬È»ºó±È½ÏµÃµ½µÄ×Ö·û´®£¬ÒÔÈ·¶¨ÈçºÎÅÅÐò¡£
-¼´Ê¹Êý×éÖÐµÄÃ¿Ò»Ïî¶¼ÊÇÊýÖµ£¬sort()·½·¨±È½ÏµÄÒ²ÊÇ×Ö·û´®¡£
+###2ã€sort()
+é»˜è®¤æƒ…å†µæŒ‰å‡åºæŽ’åˆ—æ•°ç»„é¡¹---å³æœ€å°çš„ä½äºŽæœ€å‰é¢ï¼Œæœ€å¤§çš„ä½äºŽæœ€åŽé¢ã€‚
+ä¸ºäº†å®žçŽ°æŽ’åºï¼Œsort()æ–¹æ³•ä¼šè°ƒç”¨æ•°ç»„æ¯ä¸€é¡¹çš„toString()è½¬åž‹æ–¹æ³•ï¼Œç„¶åŽæ¯”è¾ƒå¾—åˆ°çš„å­—ç¬¦ä¸²ï¼Œä»¥ç¡®å®šå¦‚ä½•æŽ’åºã€‚
+å³ä½¿æ•°ç»„ä¸­çš„æ¯ä¸€é¡¹éƒ½æ˜¯æ•°å€¼ï¼Œsort()æ–¹æ³•æ¯”è¾ƒçš„ä¹Ÿæ˜¯å­—ç¬¦ä¸²ã€‚
 
 ```
 var values = [0,1,5,10,15];
@@ -66,31 +67,31 @@ values.sort();
 alert(values);                 //0,1,10,15,5
 ```
 
-sort()º¯Êý½ÓÊÕÒ»¸ö±È½Ïº¯Êý×÷Îª²ÎÊý£¬±È½Ïº¯Êý½ÓÊÕÁ½¸ö²ÎÊý
+sort()å‡½æ•°æŽ¥æ”¶ä¸€ä¸ªæ¯”è¾ƒå‡½æ•°ä½œä¸ºå‚æ•°ï¼Œæ¯”è¾ƒå‡½æ•°æŽ¥æ”¶ä¸¤ä¸ªå‚æ•°
 
 ```
 function compare(v1,v2){
-     if(v1 < v2){                 //½µÐò
+     if(v1 < v2){                 //é™åº
        return -1;
-     }else if(v1 > v2) {          //ÉýÐò
+     }else if(v1 > v2) {          //å‡åº
        return 1;
      }else {
        return 0;
      }
 }
 
-»ò
+æˆ–
 
 function compare(v1, v2) {
     return v2-v1;
 }
 ```
 
-##Áù¡¢²Ù×÷·½·¨
-###1¡¢concat()   
-Õâ¸ö·½·¨»áÏÈ´´½¨Ò»¸öÊý×éµÄ¸±±¾£¬È»ºó½«½ÓÊÕµ½µÄ²ÎÊýÌí¼Óµ½Õâ¸ö¸±±¾µÄÄ©Î²£¬×îºó·µ»ØÐÂµÄÊý×é¡£
-ÔÚÃ»ÓÐ¸ø¸Ã·½·¨´«µÝ²ÎÊýµÄÇé¿ö£¬ËüÖ»ÊÇ¸´ÖÆµ±Ç°Êý×é²¢·µ»Ø¸±±¾¡£Èç¹û´«µÝ´Óconcat() ·½·¨µÄÊÇÒ»»ò¶à¸öÊý×é£¬Ôò¸Ã·½·¨»á½«ÕâÐ©Êý×éÖÐµÄÃ¿Ò»Ïî¶¼Ìí¼Óµ½½á¹ûÊý×éÖÐ¡£
-Èç¹û´«µÝµÄÖµ²»ÊÇÊý×é£¬ÕâÐ©Öµ»á±»¼òµ¥µØÌí¼Óµ½½á¹ûÊý×éµÄÄ©Î²¡£
+##å…­ã€æ“ä½œæ–¹æ³•
+###1ã€concat()   
+è¿™ä¸ªæ–¹æ³•ä¼šå…ˆåˆ›å»ºä¸€ä¸ªæ•°ç»„çš„å‰¯æœ¬ï¼Œç„¶åŽå°†æŽ¥æ”¶åˆ°çš„å‚æ•°æ·»åŠ åˆ°è¿™ä¸ªå‰¯æœ¬çš„æœ«å°¾ï¼Œæœ€åŽè¿”å›žæ–°çš„æ•°ç»„ã€‚
+åœ¨æ²¡æœ‰ç»™è¯¥æ–¹æ³•ä¼ é€’å‚æ•°çš„æƒ…å†µï¼Œå®ƒåªæ˜¯å¤åˆ¶å½“å‰æ•°ç»„å¹¶è¿”å›žå‰¯æœ¬ã€‚å¦‚æžœä¼ é€’ä»Žconcat() æ–¹æ³•çš„æ˜¯ä¸€æˆ–å¤šä¸ªæ•°ç»„ï¼Œåˆ™è¯¥æ–¹æ³•ä¼šå°†è¿™äº›æ•°ç»„ä¸­çš„æ¯ä¸€é¡¹éƒ½æ·»åŠ åˆ°ç»“æžœæ•°ç»„ä¸­ã€‚
+å¦‚æžœä¼ é€’çš„å€¼ä¸æ˜¯æ•°ç»„ï¼Œè¿™äº›å€¼ä¼šè¢«ç®€å•åœ°æ·»åŠ åˆ°ç»“æžœæ•°ç»„çš„æœ«å°¾ã€‚
 
 ```
 var colors = ["red", "green", "blue"];
@@ -100,11 +101,11 @@ alert(colors);           //red,green,blue
 alert(colors2);          //red,green,blue,yellow,black,brown
 
 ```
-###2¡¢slice() £¨²»»áÓ°ÏìÔ­Ê¼Êý×é£©
-ËüÄÜ¹»»ùÓÚµ±Ç°Êý×éÖÐµÄÒ»»ò¶à¸öÏî´´½¨Ò»¸öÐÂµÄÊý×é¡£
-slice()½ÓÊÜÒ»»òÁ½¸ö²ÎÊý£¬¼´Òª·µ»ØÏîµÄÆðÊ¼ºÍ½áÊøÎ»ÖÃ¡£
-ÔÚÖ»ÓÐÒ»¸ö²ÎÊýµÄÇé¿öÏÂ£¬slice()·½·¨·µ»Ø´Ó¸Ã²ÎÊýÖ¸¶¨µÄÎ»ÖÃµ½µ±Ç°Êý×éÄ©Î²µÄËùÓÐÏî¡£
-Èç¹ûÓÐÁ½¸ö²ÎÊý£¬¸Ã·½·¨·µ»ØÆðÊ¼ºÍ½áÊøÎ»ÖÃÖ®¼äµÄÏî---µ«ÊÇ²»°üÀ¨½áÊøÎ»ÖÃµÄÏî¡£
+###2ã€slice() ï¼ˆä¸ä¼šå½±å“åŽŸå§‹æ•°ç»„ï¼‰
+å®ƒèƒ½å¤ŸåŸºäºŽå½“å‰æ•°ç»„ä¸­çš„ä¸€æˆ–å¤šä¸ªé¡¹åˆ›å»ºä¸€ä¸ªæ–°çš„æ•°ç»„ã€‚
+slice()æŽ¥å—ä¸€æˆ–ä¸¤ä¸ªå‚æ•°ï¼Œå³è¦è¿”å›žé¡¹çš„èµ·å§‹å’Œç»“æŸä½ç½®ã€‚
+åœ¨åªæœ‰ä¸€ä¸ªå‚æ•°çš„æƒ…å†µä¸‹ï¼Œslice()æ–¹æ³•è¿”å›žä»Žè¯¥å‚æ•°æŒ‡å®šçš„ä½ç½®åˆ°å½“å‰æ•°ç»„æœ«å°¾çš„æ‰€æœ‰é¡¹ã€‚
+å¦‚æžœæœ‰ä¸¤ä¸ªå‚æ•°ï¼Œè¯¥æ–¹æ³•è¿”å›žèµ·å§‹å’Œç»“æŸä½ç½®ä¹‹é—´çš„é¡¹---ä½†æ˜¯ä¸åŒ…æ‹¬ç»“æŸä½ç½®çš„é¡¹ã€‚
 
 ```
 var colors = ["red", "green", "blue", "yellow", "purple"];
@@ -116,47 +117,47 @@ alert(colors3);           //green,blue,yellow
 
 ```
 
-_Èç¹ûslice()·½·¨²ÎÊýÖÐÓÐÒ»¸ö¸ºÊý£¬ÔòÓÃÊý×é³¤¶È¼ÓÉÏ¸ÃÊýÀ´È·¶¨ÏàÓ¦µÄÎ»ÖÃ¡£Èç¹û½áÊøÎ»ÖÃÐ¡ÓÚÆçÊÓÎ»ÖÃÔò·µ»Ø¿ÕÊý×é¡£_
+_å¦‚æžœslice()æ–¹æ³•å‚æ•°ä¸­æœ‰ä¸€ä¸ªè´Ÿæ•°ï¼Œåˆ™ç”¨æ•°ç»„é•¿åº¦åŠ ä¸Šè¯¥æ•°æ¥ç¡®å®šç›¸åº”çš„ä½ç½®ã€‚å¦‚æžœç»“æŸä½ç½®å°äºŽæ­§è§†ä½ç½®åˆ™è¿”å›žç©ºæ•°ç»„ã€‚_
 
-###3¡¢splice() (»á¸Ä±äÔ­Ê¼Êý×é)
-Ö÷ÒªÓÃÍ¾ÓÃÏòÊý×éÖÐ²åÈëÏî¡£
+###3ã€splice() (ä¼šæ”¹å˜åŽŸå§‹æ•°ç»„)
+ä¸»è¦ç”¨é€”ç”¨å‘æ•°ç»„ä¸­æ’å…¥é¡¹ã€‚
 
-1¡¢**É¾³ý**¡£¿ÉÒÔÉ¾³ýÈÎÒâÊýÁ¿µÄÏî£¬Ö»ÐèÖ¸¶¨2¸ö²ÎÊý£ºÒªÉ¾³ýµÄµÚÒ»ÏîÎ»ÖÃºÍÒªÉ¾³ýµÄÏîÊý¡£
-ÀýÈç£º splice(0,2) »áÉ¾³ýÊý×éÖÐµÄÇ°Á½Ïî¡£
+1ã€**åˆ é™¤**ã€‚å¯ä»¥åˆ é™¤ä»»æ„æ•°é‡çš„é¡¹ï¼Œåªéœ€æŒ‡å®š2ä¸ªå‚æ•°ï¼šè¦åˆ é™¤çš„ç¬¬ä¸€é¡¹ä½ç½®å’Œè¦åˆ é™¤çš„é¡¹æ•°ã€‚
+ä¾‹å¦‚ï¼š splice(0,2) ä¼šåˆ é™¤æ•°ç»„ä¸­çš„å‰ä¸¤é¡¹ã€‚
 
-2¡¢**²åÈë**¡£¿ÉÒÔÏòÖ¸¶¨Î»ÖÃ²åÈëÈÎÒâÊýÁ¿µÄÏî¡£Ö»ÐèÌá¹©3¸ö²ÎÊý£ºÆðÊ¼Î»ÖÃ£¬0£¨É¾³ý0Ïî£©£¬²åÈëµÄÏî¡£Èç¹û²åÈë¶àÏî£¬¿ÉÒÔÔÚ´«ÈëµÚËÄµÚÎåÒÔÖÂÈÎÒâ¶à¸öÏî¡£
-ÀýÈç£º`splice(2, 0, "red", "green")` »á´Óµ±Ç°Êý×éµÄÎ»ÖÃ2¿ªÊ¼²åÈë×Ö·û´® red ºÍ green¡£
+2ã€**æ’å…¥**ã€‚å¯ä»¥å‘æŒ‡å®šä½ç½®æ’å…¥ä»»æ„æ•°é‡çš„é¡¹ã€‚åªéœ€æä¾›3ä¸ªå‚æ•°ï¼šèµ·å§‹ä½ç½®ï¼Œ0ï¼ˆåˆ é™¤0é¡¹ï¼‰ï¼Œæ’å…¥çš„é¡¹ã€‚å¦‚æžœæ’å…¥å¤šé¡¹ï¼Œå¯ä»¥åœ¨ä¼ å…¥ç¬¬å››ç¬¬äº”ä»¥è‡´ä»»æ„å¤šä¸ªé¡¹ã€‚
+ä¾‹å¦‚ï¼š`splice(2, 0, "red", "green")` ä¼šä»Žå½“å‰æ•°ç»„çš„ä½ç½®2å¼€å§‹æ’å…¥å­—ç¬¦ä¸² red å’Œ greenã€‚
 
-3¡¢**Ìæ»»**¡£¿ÉÒÔÏòÖ¸¶¨Î»ÖÃ²åÈëÈÎÒâÏî£¬ÇÒÍ¬Ê±É¾³ýÈÎÒâÊýÁ¿µÄÏî¡£Ö»ÐèÖ¸¶¨3¸ö²ÎÊý£ºÆðÊ¼Î»ÖÃ£¬É¾³ýµÄÏîÊý£¬²åÈëµÄÏî£¨1»ò¶à¸ö£©¡£²åÈëÏîÓëÉ¾³ýÏî²»±ØÏàµÈ¡£
-ÀýÈç£º `splice(2, 1, "red", "green")`»á´ÓÎ»ÖÃ2¿ªÊ¼É¾³ý1Ïî£¬ÔÙ´ÓÎ»ÖÃ2¿ªÊ¼²åÈë×Ö·û´® red ºÍ green.
+3ã€**æ›¿æ¢**ã€‚å¯ä»¥å‘æŒ‡å®šä½ç½®æ’å…¥ä»»æ„é¡¹ï¼Œä¸”åŒæ—¶åˆ é™¤ä»»æ„æ•°é‡çš„é¡¹ã€‚åªéœ€æŒ‡å®š3ä¸ªå‚æ•°ï¼šèµ·å§‹ä½ç½®ï¼Œåˆ é™¤çš„é¡¹æ•°ï¼Œæ’å…¥çš„é¡¹ï¼ˆ1æˆ–å¤šä¸ªï¼‰ã€‚æ’å…¥é¡¹ä¸Žåˆ é™¤é¡¹ä¸å¿…ç›¸ç­‰ã€‚
+ä¾‹å¦‚ï¼š `splice(2, 1, "red", "green")`ä¼šä»Žä½ç½®2å¼€å§‹åˆ é™¤1é¡¹ï¼Œå†ä»Žä½ç½®2å¼€å§‹æ’å…¥å­—ç¬¦ä¸² red å’Œ green.
 
 ```
 var colors = ["red", "green", "blue"];
-var removed = colors.splice(0,1);               //É¾³ýµÚÒ»Ïî
+var removed = colors.splice(0,1);               //åˆ é™¤ç¬¬ä¸€é¡¹
 alert(colors);                                  //red,green,blue
 alert(removed);                                  //red
 
-removed = colors.splice(1, 0, "yellow", "orange"); //´ÓÎ»ÖÃ1¿ªÊ¼²åÈë yellow ºÍ orange
+removed = colors.splice(1, 0, "yellow", "orange"); //ä»Žä½ç½®1å¼€å§‹æ’å…¥ yellow å’Œ orange
 alert(colors);                                     //green,yellow,orange,blue
-alert(removed);                                      //·µ»Ø¿ÕÊý×é
+alert(removed);                                      //è¿”å›žç©ºæ•°ç»„
 
-removed = colors.splice(1, 1, "red", "purple");   //´ÓÎ»ÖÃ1¿ªÊ¼É¾³ýÒ»Ïî£¬²¢Í¬Ê±²åÈë2Ïî
+removed = colors.splice(1, 1, "red", "purple");   //ä»Žä½ç½®1å¼€å§‹åˆ é™¤ä¸€é¡¹ï¼Œå¹¶åŒæ—¶æ’å…¥2é¡¹
 alert(colors);                                    //green,red,purple,orange,blue
-alert(removed);                                    //yellow       ·µ»ØÉ¾³ýµÄÏî
+alert(removed);                                    //yellow       è¿”å›žåˆ é™¤çš„é¡¹
 
 ```
 
-_splice()·½·¨Ê¼ÖÕ·µ»ØÒ»¸öÊý×é£¬¸ÃÊý×é°üº¬Êý×éÖÐÉ¾³ýµÄÏî¡££¨Èç¹ûÃ»ÓÐÉ¾³ýÈÎºÎÏî£¬Ôò·µ»Ø¿ÕÊý×é£©_
+_splice()æ–¹æ³•å§‹ç»ˆè¿”å›žä¸€ä¸ªæ•°ç»„ï¼Œè¯¥æ•°ç»„åŒ…å«æ•°ç»„ä¸­åˆ é™¤çš„é¡¹ã€‚ï¼ˆå¦‚æžœæ²¡æœ‰åˆ é™¤ä»»ä½•é¡¹ï¼Œåˆ™è¿”å›žç©ºæ•°ç»„ï¼‰_
 
-##Æß¡¢Î»ÖÃ·½·¨ 
-indexOf()ºÍlastndexOf(),ÕâÁ½¸ö·½·¨¶¼½ÓÊÕÁ½¸ö²ÎÊý£ºÒª²éÕÒµÄÏîºÍ£¨¿ÉÑ¡£©±íÊ¾²éÕÒÎ»ÖÃÆðµãµÄË÷Òý¡£
+##ä¸ƒã€ä½ç½®æ–¹æ³• 
+indexOf()å’ŒlastndexOf(),è¿™ä¸¤ä¸ªæ–¹æ³•éƒ½æŽ¥æ”¶ä¸¤ä¸ªå‚æ•°ï¼šè¦æŸ¥æ‰¾çš„é¡¹å’Œï¼ˆå¯é€‰ï¼‰è¡¨ç¤ºæŸ¥æ‰¾ä½ç½®èµ·ç‚¹çš„ç´¢å¼•ã€‚
 
-1¡¢indexOf()·½·¨´ÓÊý×é¿ªÍ·£¨Î»ÖÃÎª0£©¿ªÊ¼Ïòºó²éÕÒ¡£
-2¡¢lastIndexOf()·½·¨Ôò´ÓÊý×éµÄÄ©Î²¿ªÊ¼ÏòÇ°²éÕÒ¡£
+1ã€indexOf()æ–¹æ³•ä»Žæ•°ç»„å¼€å¤´ï¼ˆä½ç½®ä¸º0ï¼‰å¼€å§‹å‘åŽæŸ¥æ‰¾ã€‚
+2ã€lastIndexOf()æ–¹æ³•åˆ™ä»Žæ•°ç»„çš„æœ«å°¾å¼€å§‹å‘å‰æŸ¥æ‰¾ã€‚
 
-ÕâÁ½¸ö·½·¨¶¼·µ»ØÒª²éÕÒµÄÏîÔÚÊý×éÖÐµÄÎ»ÖÃ£¬»òÕßÔÚÃ»ÕÒµ½µÄÇé¿öÏÂ·µ»Ø-1.ÔÙ±È½ÏµÚÒ»¸ö²ÎÊýÓëÊý×éÖÐµÄÃ¿Ò»ÏîÊ±£¬»áÊ¹ÓÃÈ«µÈ²Ù×÷·û£»Ò²¾ÍÊÇÒªÇó²éÕÒµÄÏî±ØÐëÑÏ¸ñÏàµÈ£¨¾ÍÏñÊ¹ÓÃ ===Ò»Ñù£©
+è¿™ä¸¤ä¸ªæ–¹æ³•éƒ½è¿”å›žè¦æŸ¥æ‰¾çš„é¡¹åœ¨æ•°ç»„ä¸­çš„ä½ç½®ï¼Œæˆ–è€…åœ¨æ²¡æ‰¾åˆ°çš„æƒ…å†µä¸‹è¿”å›ž-1.å†æ¯”è¾ƒç¬¬ä¸€ä¸ªå‚æ•°ä¸Žæ•°ç»„ä¸­çš„æ¯ä¸€é¡¹æ—¶ï¼Œä¼šä½¿ç”¨å…¨ç­‰æ“ä½œç¬¦ï¼›ä¹Ÿå°±æ˜¯è¦æ±‚æŸ¥æ‰¾çš„é¡¹å¿…é¡»ä¸¥æ ¼ç›¸ç­‰ï¼ˆå°±åƒä½¿ç”¨ ===ä¸€æ ·ï¼‰
 
-ÀýÈç£º
+ä¾‹å¦‚ï¼š
 ```
 var numbers = [1,2,3,4,5,4,3,2,1];
 
@@ -176,18 +177,18 @@ alert(morePeople.indexOf(person));     //0
 
 ```
 
-##°Ë¡¢µü´ú·½·¨£¨¶¼²»»áÐÞ¸ÄÊý×éÖÐ°üº¬µÄÖµ£©
-5¸öµü´ú·½·¨¡£Ã¿¸ö·½·¨¶¼½ÓÊÕÁ½¸ö²ÎÊý£ºÒªÔÚÃ¿Ò»ÏîÉÏÔËÐÐµÄº¯ÊýºÍ£¨¿ÉÑ¡£©ÔËÐÐÔÚ¸Ãº¯ÊýµÄ×÷ÓÃÓò¶ÔÏó---Ó°ÏìthisµÄ Öµ¡£
+##å…«ã€è¿­ä»£æ–¹æ³•ï¼ˆéƒ½ä¸ä¼šä¿®æ”¹æ•°ç»„ä¸­åŒ…å«çš„å€¼ï¼‰
+5ä¸ªè¿­ä»£æ–¹æ³•ã€‚æ¯ä¸ªæ–¹æ³•éƒ½æŽ¥æ”¶ä¸¤ä¸ªå‚æ•°ï¼šè¦åœ¨æ¯ä¸€é¡¹ä¸Šè¿è¡Œçš„å‡½æ•°å’Œï¼ˆå¯é€‰ï¼‰è¿è¡Œåœ¨è¯¥å‡½æ•°çš„ä½œç”¨åŸŸå¯¹è±¡---å½±å“thisçš„ å€¼ã€‚
 
-´«ÈëÕâÐ©·½·¨ÖÐµÄº¯Êý»á½ÓÊÕ3¸ö²ÎÊý£ºÊý×éÏîµÄÖµ¡¢¸ÃÏîËùÔÚÎ»ÖÃ¡¢Êý×é¶ÔÏó±¾Éí
+ä¼ å…¥è¿™äº›æ–¹æ³•ä¸­çš„å‡½æ•°ä¼šæŽ¥æ”¶3ä¸ªå‚æ•°ï¼šæ•°ç»„é¡¹çš„å€¼ã€è¯¥é¡¹æ‰€åœ¨ä½ç½®ã€æ•°ç»„å¯¹è±¡æœ¬èº«
 
-1¡¢every(): ¶ÔÊý×éÖÐµÄÃ¿Ò»ÏîÔËÐÐ¸ø¶¨º¯Êý£¬Èç¹û¸Ãº¯Êý¶ÔÃ¿Ò»Ïî¶¼·µ»Øtrue,Ôò·µ»Øtrue.
-2¡¢some(): ¶ÔÊý×éÖÐµÄÃ¿Ò»ÏîÔËÐÐ¸ø¶¨º¯Êý£¬Èç¹û¸Ãº¯Êý¶ÔÈÎÒâÒ»Ïî¶¼·µ»Øtrue,Ôò·µ»Øtrue.
-3¡¢filter(): ¶ÔÊý×éÖÐµÄÃ¿Ò»ÏîÔËÐÐ¸ø¶¨º¯Êý,·µ»Ø¸Ãº¯Êý»á·µ»ØtrueµÄÏî×é³ÉµÄÊý×é.
-4¡¢map():  ¶ÔÊý×éÖÐµÄÃ¿Ò»ÏîÔËÐÐ¸ø¶¨º¯Êý,·µ»ØÃ¿´Îº¯ÊýÌõÓÃµÄ½á¹û×é³ÉµÄÊý×é.
-5¡¢forEach(): ¶ÔÊý×éÖÐµÄÃ¿Ò»ÏîÔËÐÐ¸ø¶¨º¯Êý.Õâ¸ö·½·¨Ã»ÓÐ·µ»ØÖµ¡£
+1ã€every(): å¯¹æ•°ç»„ä¸­çš„æ¯ä¸€é¡¹è¿è¡Œç»™å®šå‡½æ•°ï¼Œå¦‚æžœè¯¥å‡½æ•°å¯¹æ¯ä¸€é¡¹éƒ½è¿”å›žtrue,åˆ™è¿”å›žtrue.
+2ã€some(): å¯¹æ•°ç»„ä¸­çš„æ¯ä¸€é¡¹è¿è¡Œç»™å®šå‡½æ•°ï¼Œå¦‚æžœè¯¥å‡½æ•°å¯¹ä»»æ„ä¸€é¡¹éƒ½è¿”å›žtrue,åˆ™è¿”å›žtrue.
+3ã€filter(): å¯¹æ•°ç»„ä¸­çš„æ¯ä¸€é¡¹è¿è¡Œç»™å®šå‡½æ•°,è¿”å›žè¯¥å‡½æ•°ä¼šè¿”å›žtrueçš„é¡¹ç»„æˆçš„æ•°ç»„.
+4ã€map():  å¯¹æ•°ç»„ä¸­çš„æ¯ä¸€é¡¹è¿è¡Œç»™å®šå‡½æ•°,è¿”å›žæ¯æ¬¡å‡½æ•°æ¡ç”¨çš„ç»“æžœç»„æˆçš„æ•°ç»„.
+5ã€forEach(): å¯¹æ•°ç»„ä¸­çš„æ¯ä¸€é¡¹è¿è¡Œç»™å®šå‡½æ•°.è¿™ä¸ªæ–¹æ³•æ²¡æœ‰è¿”å›žå€¼ã€‚
 
-Àý£º
+ä¾‹ï¼š
 ```
 var numbers = [1,2,3,4,5,4,3,2,1];
 
@@ -204,7 +205,7 @@ var someResult = numbers.some(function(item, index, array){
 alert(someResult);      //true
 ```
 
-**every()·½·¨ÒªÇóÃ¿Ò»Ïî·ûºÏÒªÇóÔò·µ»Øtrue.some()·½·¨ÒªÇóÖÁÉÙÓÐÒ»ÏîÂú×ãÒªÇó£¬Ôò·µ»Øtrue.**
+**every()æ–¹æ³•è¦æ±‚æ¯ä¸€é¡¹ç¬¦åˆè¦æ±‚åˆ™è¿”å›žtrue.some()æ–¹æ³•è¦æ±‚è‡³å°‘æœ‰ä¸€é¡¹æ»¡è¶³è¦æ±‚ï¼Œåˆ™è¿”å›žtrue.**
 
 ```
 var numbers = [1,2,3,4,5,4,3,2,1];
@@ -222,28 +223,28 @@ var mapResult = numbers.map(function(item, index, array){
 alert(mapResult);      //[2,4,6,8,10,8,6,4,2]
 ```
 
-**filter()·½·¨·µ»Ø·ûºÏÒªÇóµÄÏî×é³ÉµÄÊý×é£¬map()·½·¨·µ»ØÃ¿Ò»Ïî¶¼ÊÇÔÚÔ­Ê¼Êý×éÖÐµÄ¶ÔÓ¦ÏîÉÏÔËÐÐ´«Èëº¯ÊýµÄ½á¹û¡£**
+**filter()æ–¹æ³•è¿”å›žç¬¦åˆè¦æ±‚çš„é¡¹ç»„æˆçš„æ•°ç»„ï¼Œmap()æ–¹æ³•è¿”å›žæ¯ä¸€é¡¹éƒ½æ˜¯åœ¨åŽŸå§‹æ•°ç»„ä¸­çš„å¯¹åº”é¡¹ä¸Šè¿è¡Œä¼ å…¥å‡½æ•°çš„ç»“æžœã€‚**
 
 ```
 var numbers = [1,2,3,4,5,4,3,2,1];
 
 var forEachResult = numbers.forEach(function(item, index, array){
-     //Ö´ÐÐÄ³Ð©²Ù×÷
+     //æ‰§è¡ŒæŸäº›æ“ä½œ
 });
 
 ```
 
-**forEach()·½·¨Ã»ÓÐ·µ»ØÖµ£¬±¾ÖÊÉÏÓëÊ¹ÓÃforÑ­»·µü´úÊý×éÒ»Ñù¡£**
+**forEach()æ–¹æ³•æ²¡æœ‰è¿”å›žå€¼ï¼Œæœ¬è´¨ä¸Šä¸Žä½¿ç”¨forå¾ªçŽ¯è¿­ä»£æ•°ç»„ä¸€æ ·ã€‚**
 
-##¾Å¡¢¹é²¢·½·¨
+##ä¹ã€å½’å¹¶æ–¹æ³•
 
-reduce()ºÍreduceRight().ÕâÁ½¸ö·½·¨»áµü´úÊý×éµÄËùÓÐÏî£¬È»ºó¹¹½¨Ò»¸ö×îÖÕ·µ»ØÖµ¡£ÆäÖÐ£¬reduce()·½·¨´ÓÊý×éµÚÒ»Ïî¿ªÊ¼£¬Öð¸ö±éÀúµ½×îºó.
-¶øreduceRight()Ôò´ÓÊý×éµÄ×îºóÒ»Ïî¿ªÊ¼£¬ÏòÇ°±éÀúµ½µÚÒ»Ïî¡£
+reduce()å’ŒreduceRight().è¿™ä¸¤ä¸ªæ–¹æ³•ä¼šè¿­ä»£æ•°ç»„çš„æ‰€æœ‰é¡¹ï¼Œç„¶åŽæž„å»ºä¸€ä¸ªæœ€ç»ˆè¿”å›žå€¼ã€‚å…¶ä¸­ï¼Œreduce()æ–¹æ³•ä»Žæ•°ç»„ç¬¬ä¸€é¡¹å¼€å§‹ï¼Œé€ä¸ªéåŽ†åˆ°æœ€åŽ.
+è€ŒreduceRight()åˆ™ä»Žæ•°ç»„çš„æœ€åŽä¸€é¡¹å¼€å§‹ï¼Œå‘å‰éåŽ†åˆ°ç¬¬ä¸€é¡¹ã€‚
 
-ÕâÁ½¸ö·½·¨¶¼½ÓÊÕÁ½¸ö²ÎÊý£ºÒ»¸öÔÚÃ¿Ò»ÏîÉÏµ÷ÓÃµÄº¯ÊýºÍ£¨¿ÉÑ¡µÄ£©×÷Îª¹é²¢»ù´¡µÄ³õÊ¼Öµ¡£´«¸øreduce()ºÍreduceRight()µÄº¯Êý½ÓÊÕ4¸ö²ÎÊý£º
-Ç°Ò»¸öÖµ¡¢µ±Ç°Öµ¡¢ÏîµÄË÷Òý¡¢Êý×é¶ÔÏó¡£
+è¿™ä¸¤ä¸ªæ–¹æ³•éƒ½æŽ¥æ”¶ä¸¤ä¸ªå‚æ•°ï¼šä¸€ä¸ªåœ¨æ¯ä¸€é¡¹ä¸Šè°ƒç”¨çš„å‡½æ•°å’Œï¼ˆå¯é€‰çš„ï¼‰ä½œä¸ºå½’å¹¶åŸºç¡€çš„åˆå§‹å€¼ã€‚ä¼ ç»™reduce()å’ŒreduceRight()çš„å‡½æ•°æŽ¥æ”¶4ä¸ªå‚æ•°ï¼š
+å‰ä¸€ä¸ªå€¼ã€å½“å‰å€¼ã€é¡¹çš„ç´¢å¼•ã€æ•°ç»„å¯¹è±¡ã€‚
 
-Õâ¸öº¯Êý·µ»ØµÄÈÎºÎÖµ¶¼»á×÷ÎªµÚÒ»¸ö²ÎÊý×Ô¶¯´«¸øÏÂÒ»Ïî¡£µÚÒ»´Îµü´ú·¢ÉúÔÚÊý×éµÄµÚ¶þÏîÉÏ£¬Òò´ËµÚÒ»¸ö²ÎÊýÊÇÊý×éµÄµÚÒ»Ïî£¬µÚ¶þ¸ö²ÎÊýÊÇÊý×éµÄµÚ¶þÏî¡£
+è¿™ä¸ªå‡½æ•°è¿”å›žçš„ä»»ä½•å€¼éƒ½ä¼šä½œä¸ºç¬¬ä¸€ä¸ªå‚æ•°è‡ªåŠ¨ä¼ ç»™ä¸‹ä¸€é¡¹ã€‚ç¬¬ä¸€æ¬¡è¿­ä»£å‘ç”Ÿåœ¨æ•°ç»„çš„ç¬¬äºŒé¡¹ä¸Šï¼Œå› æ­¤ç¬¬ä¸€ä¸ªå‚æ•°æ˜¯æ•°ç»„çš„ç¬¬ä¸€é¡¹ï¼Œç¬¬äºŒä¸ªå‚æ•°æ˜¯æ•°ç»„çš„ç¬¬äºŒé¡¹ã€‚
 
 ```
 var values = [1,2,3,4,5];
@@ -254,9 +255,9 @@ var sum = values.reduce(function(perv, cur, index, array){
 
 alert(sum);       //15
 ```
-µÚÒ»´ÎÖ´ÐÐº¯Êý£¬prevÊÇ1£¬curÊÇ2,µÚ¶þ´ÎprevÊÇ3£¬curÊÇ3£¬Õâ¸ö¹ý³Ì»á³ÖÐøµ½°ÑÊý×éÃ¿Ò»Ïî¶¼·ÃÎÊÒ»±é£¬×îºó·µ»Ø½á¹û¡£
+ç¬¬ä¸€æ¬¡æ‰§è¡Œå‡½æ•°ï¼Œprevæ˜¯1ï¼Œcuræ˜¯2,ç¬¬äºŒæ¬¡prevæ˜¯3ï¼Œcuræ˜¯3ï¼Œè¿™ä¸ªè¿‡ç¨‹ä¼šæŒç»­åˆ°æŠŠæ•°ç»„æ¯ä¸€é¡¹éƒ½è®¿é—®ä¸€éï¼Œæœ€åŽè¿”å›žç»“æžœã€‚
 
-reduceRight()µÄ×÷ÓÃÀàËÆ£¬²»¹ý·½ÏòÏà·´¡£
+reduceRight()çš„ä½œç”¨ç±»ä¼¼ï¼Œä¸è¿‡æ–¹å‘ç›¸åã€‚
 
 ```
 var values = [1,2,3,4,5];
@@ -268,9 +269,9 @@ var sum = values.reduceRight(function(perv, cur, index, array){
 alert(sum);       //15
 ```
 
-µÚÒ»´ÎÖ´ÐÐº¯Êý£¬prevÊÇ5£¬curÊÇ4,µÚ¶þ´ÎprevÊÇ9£¬curÊÇ3.
+ç¬¬ä¸€æ¬¡æ‰§è¡Œå‡½æ•°ï¼Œprevæ˜¯5ï¼Œcuræ˜¯4,ç¬¬äºŒæ¬¡prevæ˜¯9ï¼Œcuræ˜¯3.
 
-reduce()»¹ÊÇreduceRight()¡£Ö÷ÒªÈ¡¾öÓÚ´ÓÄÄÍ·¿ªÊ¼±éÀúÊý×é£¬³ý´ËÖ®ÍâºÁÎÞ²î±ð¡£
+reduce()è¿˜æ˜¯reduceRight()ã€‚ä¸»è¦å–å†³äºŽä»Žå“ªå¤´å¼€å§‹éåŽ†æ•°ç»„ï¼Œé™¤æ­¤ä¹‹å¤–æ¯«æ— å·®åˆ«ã€‚
 
 
 
