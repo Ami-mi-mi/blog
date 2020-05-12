@@ -7,7 +7,7 @@ if(value instanceof Array) {
 }
 ```
 
-**2、isArray**
+_2、isArray_
 ```
 if(Array.isArray(value)) {
 //对数组进行某些操作
